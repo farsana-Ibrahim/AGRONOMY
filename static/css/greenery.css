@@ -1,0 +1,10 @@
+.greenery{
+	background: url('../images/greenery.jpg') no-repeat 0px 0px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    min-height: 300px;
+	position: relative;
+}
