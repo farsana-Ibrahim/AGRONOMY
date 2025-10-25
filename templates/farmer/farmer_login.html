@@ -1,0 +1,93 @@
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Germinate an Agriculture Category Flat Bootstrap Responsive Website Template | Gallery :: w3layouts</title>
+<!-- custom-theme -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Germinate Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //custom-theme -->
+<link href="{% static 'css/bootstrap.css'%}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+<!-- //js -->
+<!-- gallery -->
+<link href="{% static 'css/lsb.css" rel="stylesheet'%}" type="text/css">
+<!-- //gallery -->
+<!-- font-awesome-icons -->
+<link href="{% static 'css/font-awesome.css'%}" rel="stylesheet"> 
+<!-- //font-awesome-icons -->
+</head>
+	
+<body>
+
+<!-- banner -->
+	<div class="banner">
+		<div class="container">
+			<div class="w3_agileits_banner_main_grid">
+				<div class="w3_agile_logo">
+					<h1><a href="{% static 'index.html'%}"><span>G</span>erminate<i>Grow healthy products</i></a></h1>
+				</div>
+
+                
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset text-center">
+            <h1 style="text-align:center; padding-top:135px; padding-right:30px; color:#fefffe;">Farmer Login</h1>
+            <br>
+            <center><div style=" background-color:#e1f5d4f1; height:230px; width:270px; border-radius:50px; text-align:center;" >
+                <form action="" method="POST">
+                    {%csrf_token%}
+                    {% if error%}
+                    <div class="alert alert-danger" role="alert">
+                        {{error}}
+                        </div>
+                        {% endif %}
+                    
+                    {% for msg in  messages %}
+                    <h3>{{msg}}</h3>
+                    {% endfor %}
+            <div class="form-login"><br>
+            <div class="col-sm-12" style="padding-top:10px;">
+                <input type="text" class="form-control"  placeholder="Name" name="name" style="border-radius:15px;">
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="col-sm-12" style="padding-top:10px;">
+                    <input type="password" class="form-control" name="pwd" placeholder="Enter Your Password"  style="border-radius:15px;">
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+
+            <button class="col-md-4 col-md-offset-4 btn"
+            style="background-color:#ffffff; color:#2b302f; 
+            font-size:20px; margin-top:10px;"
+            type="submit" > Submit
+           </button>
+        </div>
+    </form>
+    </div>
+</div>
+<br><br><br>
+			
+	</div>
+</body>
+
+</html>
+<!-- banner -->
+
+
+

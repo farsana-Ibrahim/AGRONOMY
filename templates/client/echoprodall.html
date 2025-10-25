@@ -1,0 +1,291 @@
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Germinate an Agriculture Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<!-- custom-theme -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Germinate Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //custom-theme -->
+<link href="{% static 'css/bootstrap.css'%}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js'%}"></script>
+<!-- //js -->
+<link href="{% static 'css/mislider.css'%}" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/mislider-custom.css'%}" rel="stylesheet" type="text/css" />
+<!-- font-awesome-icons -->
+<link href="{% static 'css/font-awesome.css'%}" rel="stylesheet"> 
+<!-- //font-awesome-icons -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+</head>
+
+
+
+
+
+<div class="services-bottom" id="allprod">
+    <div class="container">
+    <h3 class="agileits_w3layouts_head agileinfo_head w3_head"><span>View</span>All Product</h3>
+    <div class="dropdown">
+        <button class="agileits_w3layouts_learn_more hvr-radial-out"  style="width:250px;padding:10px;color:white"  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <span>Select Product BasedOn Category</span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            {% for i in cat %}
+          <li><a class="dropdown-item" href="{% url 'cf' i.id %}">{{i.name}}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    <div class="w3_agile_image">
+    <img src="{% static 'images/17.png'%}" alt=" " class="img-responsive">
+    </div>
+    
+    <p class="agile_para agileits_para"></p>        
+    
+    <div class="clearfix"> </div>
+    </div>
+    <section id="gtco-menu" class="section-padding">
+    <div class="container">
+        <div class="section-content">
+            <div class="row mb-5">
+                <div class="col-md-12">
+                   
+                </div>
+             </div>  
+    
+    
+    
+    <p class="agile_para agileits_para"></p>
+    {% for prod in prd %}
+    
+    <div class="w3ls_news_grids">
+    
+        <div class="col-md-4 w3_agileits_services_bottom_grid" >
+            <div class="wthree_services_bottom_grid1 " >
+                <img src="{{prod.image.url}}" style="width:500px;height:175px;" alt="image" class="img-responsive" />
+                <div class="wthree_services_bottom_grid1_pos">
+                    <h4>{{prod.pname}}</h4>
+                </div>
+            </div>
+            <div class="agileinfo_services_bottom_grid2">
+                <p> {{prod.pdesc|truncatewords:13}}</p>
+                <div class="agileits_w3layouts_learn_more hvr-radial-out">
+                    <a href="{% url 'eprodD' prod.id %}" >Read More</a>
+                    {% comment %} data-toggle="modal" data-target="#myModal" {% endcomment %}
+                </div>
+             
+            </div>
+        </div>
+                {% endfor %}
+    
+                     
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    
+       
+    </div>
+    </div>
+    </div>
+    </section>
+    </div>
+    </div>
+
+
+
+
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="w3agile_footer_grids">
+            <div class="col-md-3 agileinfo_footer_grid">
+                <div class="agileits_w3layouts_footer_logo">
+                    <h2><a href="{% static 'index.html'%}"><span>G</span>erminate<i>Grow healthy products</i></a></h2>
+                </div>
+            </div>
+            <div class="col-md-4 agileinfo_footer_grid">
+                <h3>Contact Info</h3>
+                <h4>Call Us <span>+1234 567 891</span></h4>
+                <p>My Company, 875 Jewel Road <span>8907 Ukraine.</span></p>
+                <ul class="agileits_social_list">
+                    <li><a href="{% static '#'%}" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="{% static '#'%}" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="{% static '#'%}" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                    <li><a href="{% static '#'%}" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 agileinfo_footer_grid agileinfo_footer_grid1">
+                <h3>Navigation</h3>
+                <ul class="w3layouts_footer_nav">
+                    <li><a href="{% static 'index.html'%}"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Home</a></li>
+                    <li><a href="{% static 'icons.html'%}"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Web Icons</a></li>
+                    <li><a href="{% static 'typography.html'%}"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Typography</a></li>
+                    <li><a href="{% static 'contact.html'%}"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 agileinfo_footer_grid">
+                <h3>Blog Posts</h3>
+                <div class="agileinfo_footer_grid_left">
+                    <a href="{% static 'images\6.jpg'%}" data-toggle="modal" data-target="#myModal"><img src="{% static 'images/6.jpg'%}" alt=" " class="img-responsive" /></a>
+                </div>
+                <div class="agileinfo_footer_grid_left">
+                    <a href="{% static 'images/2.jpg'%}" data-toggle="modal" data-target="#myModal"><img src="{% static 'images/2.jpg'%}" alt=" " class="img-responsive" /></a>
+                </div>
+                <div class="agileinfo_footer_grid_left">
+                    <a href="{% static 'images/5.jpg'%}" data-toggle="modal" data-target="#myModal"><img src="{% static 'images/5.jpg'%}" alt=" " class="img-responsive" /></a>
+                </div>
+                <div class="agileinfo_footer_grid_left">
+                    <a href="{% static 'images/3.jpg'%}" data-toggle="modal" data-target="#myModal"><img src="{% static 'images/3.jpg'%}-" alt=" " class="img-responsive" /></a>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="w3_agileits_footer_copy">
+        <div class="container">
+            <p>© 2017 Germinate. All rights reserved | Design by <a href="{% static 'http://w3layouts.com'%}">W3layouts.</a></p>
+        </div>
+    </div>
+</div>
+<!-- //footer -->
+<!-- stats -->
+<script src="{% static 'js/jquery.waypoints.min.js'%}"></script>
+<script src="{% static 'js/jquery.countup.js'%}"></script>
+    <script>
+        $('.counter').countUp();
+    </script>
+<!-- //stats -->
+<!-- mislider -->
+<script src="{% static 'js/mislider.js'%}" type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery(function ($) {
+        var slider = $('.mis-stage').miSlider({
+            //  The height of the stage in px. Options: false or positive integer. false = height is calculated using maximum slide heights. Default: false
+            stageHeight: 380,
+            //  Number of slides visible at one time. Options: false or positive integer. false = Fit as many as possible.  Default: 1
+            slidesOnStage: false,
+            //  The location of the current slide on the stage. Options: 'left', 'right', 'center'. Defualt: 'left'
+            slidePosition: 'center',
+            //  The slide to start on. Options: 'beg', 'mid', 'end' or slide number starting at 1 - '1','2','3', etc. Defualt: 'beg'
+            slideStart: 'mid',
+            //  The relative percentage scaling factor of the current slide - other slides are scaled down. Options: positive number 100 or higher. 100 = No scaling. Defualt: 100
+            slideScaling: 150,
+            //  The vertical offset of the slide center as a percentage of slide height. Options:  positive or negative number. Neg value = up. Pos value = down. 0 = No offset. Default: 0
+            offsetV: -5,
+            //  Center slide contents vertically - Boolean. Default: false
+            centerV: true,
+            //  Opacity of the prev and next button navigation when not transitioning. Options: Number between 0 and 1. 0 (transparent) - 1 (opaque). Default: .5
+            navButtonsOpacity: 1,
+        });
+    });
+</script>
+<!-- //mislider -->
+<!-- text-effect -->
+    <script type="text/javascript" src="{% static 'js/jquery.transit.js'%}"></script> 
+    <script type="text/javascript" src="{% static 'js/jquery.textFx.js'%}"></script> 
+    <script type="text/javascript">
+        $(document).ready(function() {
+                $('.test').textFx({
+                    type: 'fadeIn',
+                    iChar: 100,
+                    iAnim: 1000
+                });
+        });
+    </script>
+<!-- //text-effect -->
+<!-- menu -->
+<script>
+    $(function() {
+        
+        initDropDowns($("div.shy-menu"));
+
+    });
+
+    function initDropDowns(allMenus) {
+
+        allMenus.children(".shy-menu-hamburger").on("click", function() {
+            
+            var thisTrigger = jQuery(this),
+                thisMenu = thisTrigger.parent(),
+                thisPanel = thisTrigger.next();
+
+            if (thisMenu.hasClass("is-open")) {
+
+                thisMenu.removeClass("is-open");
+
+            } else {			
+                
+                allMenus.removeClass("is-open");	
+                thisMenu.addClass("is-open");
+                thisPanel.on("click", function(e) {
+                    e.stopPropagation();
+                });
+            }
+            
+            return false;
+        });
+    }
+</script>
+<!-- //menu -->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="{% static 'js/move-top.js'%}"></script>
+<script type="text/javascript" src="{% static 'js/easing.js'%}"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $(".scroll").click(function(event){		
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+    });
+});
+</script>
+<!-- start-smoth-scrolling -->
+<!-- for bootstrap working -->
+<script src="{% static 'js/bootstrap.js'%}"></script>
+<!-- //for bootstrap working -->
+<!-- here stars scrolling icon -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+            var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear' 
+            };
+        */
+                            
+        $().UItoTop({ easingType: 'easeOutQuart' });
+                            
+        });
+</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

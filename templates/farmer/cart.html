@@ -1,0 +1,272 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Germinate an Agriculture Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<!-- custom-theme -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Germinate Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //custom-theme -->
+<link href="{% static 'css/bootstrap.css'%}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js'%}"></script>
+<!-- //js -->
+<link href="{% static 'css/mislider.css'%}" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/mislider-custom.css'%}" rel="stylesheet" type="text/css" />
+<!-- font-awesome-icons -->
+<link href="{% static 'css/font-awesome.css'%}" rel="stylesheet"> 
+<!-- //font-awesome-icons -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+</head>
+	
+<body   style="background-image: url('../static/images/paddy.jpg');
+background-repeat:
+background-attachment; 
+background-size: 100% 100%;" 
+>
+    <div class="row">
+    </div><br><br><br>
+    <div class="row">
+          <div class="container" style="background-color:#a3ed5f;width:1150px;">
+
+    <div class="heading-section text-center mt-5">
+      <h1 style="color:green;"> <b> Cart</b> </h1> 
+      <h3 style="color:green;margin-right:800px;"> <a href="fhome" style="color:green;" ><b> Back To Home</b></a> </h3> 
+     
+
+
+      
+    </div></div></div></div>
+
+ <div class="container">
+    <div class="border rounded p-4 " style="background-color:#cde8b5">
+         <hr>
+         <table class="table">
+             <thead>
+                 <tr>
+                     <th><b style="color:green;font-size:20px;">Sno.</b></th>
+                     <th><b style="color:green;font-size:20px;">Image</b></th>
+                     <th><b style="color:green;font-size:20px;">Product Name</b></th>
+                     <th><b style="color:green;font-size:20px;">Date</b></th>
+                     <th><b style="color:green;font-size:20px;">Price</b></th>
+                     <th><b style="color:green;font-size:20px;">Quantity</b></th>
+                     <th><b style="color:green;font-size:20px;">Providers</b></th>
+
+                     
+                 </tr>
+             </thead>
+             <tbody>
+                 {% for i in acart %}
+                <tr>
+                    <td style="color:#83d439;font-size:20px;">{{forloop.counter}}</td>
+                    <td><img style="height: 80px;" class="rounded-circle" src="{{i.image.url}}" alt=""></td>
+                    <td ><b>{{i.name}}</b></td>
+                    <td>{{i.date}}</td>
+                    <td>{{i.price}}</td>
+                    <td>{{i.qty}}</td>
+                    <td>Agro ServiceName: {{i.agro}}</td>
+                    <td><a href="{% url 'acartdelete' i.id %}" class="btn btn-danger ">Remove</a>
+                    </td>
+                    
+                </tr>
+                 {% endfor %} 
+
+                 {% for i in kcart %}
+                 <tr>
+                     <td>{{forloop.counter}}</td>
+                     <td><img style="height: 80px;" class="rounded-circle" src="{{i.image.url}}" alt=""></td>
+                     <td>{{i.name}}</td>
+                     <td>{{i.date}}</td>
+                     <td>{{i.price}}</td>
+                     <td>{{i.qty}}</td>
+                     <td>Krishibhavan Name: {{i.krishi}}</td>
+                     <td><a href="{% url 'delete' i.id %}" class="btn btn-danger ">Remove</a>
+                     </td> 
+                </tr>
+                  {% endfor %} 
+                <tfoot>
+                  <tr>
+                      <th colspan="2"></th>
+                      <th class="" colspan="">Total</th>
+                      <th>{{tot}}</th>
+                      <th>
+                          {% if request.session.id  %}
+                        <a href="{% url 'checkout' request.session.id %}" class="btn btn-success col-lg-4 float-right mb-3"
+                         style="width:150px;padding:20px">CheckOut</a>
+                         {% endif %}
+                      </th>
+                  </tr>
+              </tfoot>
+            
+            
+          </table>
+          <hr>
+     </div>
+  </div>  
+
+  <div class="footer">
+	<div class="container">
+		<div class="w3agile_footer_grids">
+			<div class="col-md-3 agileinfo_footer_grid">
+				<div class="agileits_w3layouts_footer_logo">
+					<h2><a href="index.html"><span>K</span>rishiBhavan</a></h2>
+				</div>
+			</div>
+			<div class="col-md-4 agileinfo_footer_grid">
+				<h3>Contact Info</h3>
+				<h4>Call Us <span>+1234 567 891</span></h4>
+				<p>My Company, 875 Jewel Road <span>8907 Ukraine.</span></p>
+				<ul class="agileits_social_list">
+					<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+			<div class="col-md-2 agileinfo_footer_grid agileinfo_footer_grid1">
+				<h3>Navigation</h3>
+				<ul class="w3layouts_footer_nav">
+					<li><a href="index.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Home</a></li>
+					<li><a href="icons.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Web Icons</a></li>
+					<li><a href="typography.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Typography</a></li>
+					<li><a href="contact.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 agileinfo_footer_grid">
+				<h3>Blog Posts</h3>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/6.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/2.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/5.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/3.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<div class="w3_agileits_footer_copy">
+		<div class="container">
+			<p>© 2017 Germinate. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts.</a></p>
+		</div>
+	</div>
+</div>
+  
+  <script type="text/javascript">
+    // When the window has finished loading create our google map below
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+        // Basic options for a simple Google Map
+        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+        var mapOptions = {
+            // How zoomed in you want the map to start at (always required)
+            zoom: 11,
+
+            // The latitude and longitude to center the map (always required)
+            center: new google.maps.LatLng(33.6, 49.966667), // New York
+
+            // How you would like to style the map. 
+            // This is where you would paste any style found on Snazzy Maps.
+            styles: [	{		"featureType":"landscape",		"stylers":[			{				"hue":"#FFA800"			},			{				"saturation":0			},			{				"lightness":0			},			{				"gamma":1			}		]	},	{		"featureType":"road.highway",		"stylers":[			{				"hue":"#53FF00"			},			{				"saturation":-73			},			{				"lightness":40			},			{				"gamma":1			}		]	},	{		"featureType":"road.arterial",		"stylers":[			{				"hue":"#FBFF00"			},			{				"saturation":0			},			{				"lightness":0			},			{				"gamma":1			}		]	},	{		"featureType":"road.local",		"stylers":[			{				"hue":"#00FFFD"			},			{				"saturation":0			},			{				"lightness":30			},			{				"gamma":1			}		]	},	{		"featureType":"water",		"stylers":[			{				"hue":"#00BFFF"			},			{				"saturation":6			},			{				"lightness":8			},			{				"gamma":1			}		]	},	{		"featureType":"poi",		"stylers":[			{				"hue":"#679714"			},			{				"saturation":33.4			},			{				"lightness":-25.4			},			{				"gamma":1			}		]	}]
+        };
+
+        // Get the HTML DOM element that will contain your map 
+        // We are using a div with id="map" seen below in the <body>
+        var mapElement = document.getElementById('map');
+
+        // Create the Google Map using our element and options defined above
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        // Let's also add a marker while we're at it
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(33.6, 49.966667),
+            map: map,
+            title: 'Snazzy!'
+        });
+    }
+</script>
+<!-- footer -->
+
+
+<!-- //footer -->
+<!-- menu -->
+<script>
+$(function() {
+    
+    initDropDowns($("div.shy-menu"));
+
+});
+
+function initDropDowns(allMenus) {
+
+    allMenus.children(".shy-menu-hamburger").on("click", function() {
+        
+        var thisTrigger = jQuery(this),
+            thisMenu = thisTrigger.parent(),
+            thisPanel = thisTrigger.next();
+
+        if (thisMenu.hasClass("is-open")) {
+
+            thisMenu.removeClass("is-open");
+
+        } else {			
+            
+            allMenus.removeClass("is-open");	
+            thisMenu.addClass("is-open");
+            thisPanel.on("click", function(e) {
+                e.stopPropagation();
+            });
+        }
+        
+        return false;
+    });
+}
+</script>
+<!-- //menu -->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+$(".scroll").click(function(event){		
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+});
+});
+</script>
+<!-- start-smoth-scrolling -->
+<!-- for bootstrap working -->
+<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- here stars scrolling icon -->
+<script type="text/javascript">
+$(document).ready(function() {
+    /*
+        var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear' 
+        };
+    */
+                        
+    $().UItoTop({ easingType: 'easeOutQuart' });
+                        
+    });
+</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>

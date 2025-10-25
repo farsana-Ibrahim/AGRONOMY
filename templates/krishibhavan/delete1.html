@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Germinate an Agriculture Category Flat Bootstrap Responsive Website Template | Gallery :: w3layouts</title>
+<!-- custom-theme -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Germinate Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //custom-theme -->
+<link href="{% static 'css/bootstrap.css'%}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+<!-- //js -->
+<!-- gallery -->
+<link href="{% static 'css/lsb.css" rel="stylesheet'%}" type="text/css">
+<!-- //gallery -->
+<!-- font-awesome-icons -->
+<link href="{% static 'css/font-awesome.css'%}" rel="stylesheet"> 
+<!-- //font-awesome-icons -->
+</head>
+	
+<body>
+<!-- banner -->
+	<div class="banner1">
+		<div class="container">
+			<div class="w3_agileits_banner_main_grid">
+				
+				<div class="agile_social_icons_banner">
+                    <form method='post'>
+                         {% csrf_token %}
+					<b style="color:#ffffff; font-size:40px;">Are you sure? Do you want to 
+                        delete this item?</b>
+                        <br>
+                        <center><button type="submit"style="width:90px; height:50px;">Confirm</button><center>&nbsp 
+                    </form>
+                    {% comment %} <a href="krishimain"><span class="label label-success">Delete</span></a> {% endcomment %}
+
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
